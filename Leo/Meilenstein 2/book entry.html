@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang="de">
+  <head>
+      <meta  charset="UTF-8">
+      <title>book_entry</title>
+  </head>  
+
+    <body>
+        <h1>Buch anlegen</h1>
+        Buchtitel<input type="text" name="titel" size="30" maxlength="40"/><br/>
+        Buchautor<input type="text" name="autor" size="30" maxlength="40"/><br/>
+        ISBN<input type="number" name="isbn" size="30" maxlength="20"/><br/>
+        Kapitel<input type="number" name="kapitel" size="30" maxlength="40"/><br/>
+        Erscheinungsjahr<input type="number" name="jahr" size="30" maxlength="4"/><br/>
+        Auflage<input type="number" name="auflage" size="30" maxlength="10"/><br/>
+        Art des Buches<select name="art" size="1">
+                        <option value="eBook">eBook</option>
+                        <option value="newspaper">Newspaper</option>
+                        <option value="taschenbuch">Taschenbuch</option>
+                        <option value="lexikon">Lexikon</option>
+                        <option value="hardover" selected="selected">Hardcover</option>
+                        <option value="paperback">Paperback</option>
+                        </select><br/>
+        Genre<input type="checkbox" name="genre" value="horror" checked="checked"/>Horror
+             <input type="checkbox" name="genre" value="doku"/>Doku<br/>
+             <input type="checkbox" name="genre" value="psycho"/>Psycho
+             <input type="checkbox" name="genre" value="komödie"/>Komödie<br/>
+            <input type="checkbox" name="genre" value="krimi"/>Krimi<br/>
+            <input type="checkbox" name="genre" value="romanze"/>Romanze<br/>
+        Dein Vorname<input type="text" name="vorname" size="30"/><br/>
+        Dein Nachname<input type="text" name="name" size="30"/><br/>
+        Mein Favorit<input type="checkbox" name="filmfavorit" size="1"/><br/>
+        
+    </body>
+</html>
