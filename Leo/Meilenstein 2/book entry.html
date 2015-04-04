@@ -7,29 +7,43 @@
 
     <body>
         <h1>Buch anlegen</h1>
-        Buchtitel<input type="text" name="titel" size="30" maxlength="40"/><br/>
-        Buchautor<input type="text" name="autor" size="30" maxlength="40"/><br/>
-        ISBN<input type="number" name="isbn" size="30" maxlength="20"/><br/>
-        Kapitel<input type="number" name="kapitel" size="30" maxlength="40"/><br/>
-        Erscheinungsjahr<input type="number" name="jahr" size="30" maxlength="4"/><br/>
-        Auflage<input type="number" name="auflage" size="30" maxlength="10"/><br/>
-        Art des Buches<select name="art" size="1">
+        <form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off">
+            
+        <label for="idTitel">Buchtitel</label>
+            <input type="text" name="titel" size="30" maxlength="40" id="idTitel" required="required"/><br/>
+        
+        <label>Buchautor<input type="text" name="autor" size="30" maxlength="40" required="required"/></label><br/>
+            
+        <label>ISBN<input type="number" name="isbn" size="30" maxlength="20"/></label><br/>
+        <label>Kapitel<input type="number" name="kapitel" size="30" maxlength="40" required="required"/></label><br/>
+        <label>Erscheinungsjahr<input type="number" name="jahr" size="30"  maxlength="4" required="required" /></label><br/>
+    
+        <label>Auflage<input type="number" name="auflage" size="30" maxlength="10" required="required"/></label><br/>
+        <label>Art des Buches<select name="art" size="1">
                         <option value="eBook">eBook</option>
                         <option value="newspaper">Newspaper</option>
                         <option value="taschenbuch">Taschenbuch</option>
                         <option value="lexikon">Lexikon</option>
                         <option value="hardover" selected="selected">Hardcover</option>
                         <option value="paperback">Paperback</option>
-                        </select><br/>
-        Genre<input type="checkbox" name="genre" value="horror" checked="checked"/>Horror
-             <input type="checkbox" name="genre" value="doku"/>Doku<br/>
-             <input type="checkbox" name="genre" value="psycho"/>Psycho
-             <input type="checkbox" name="genre" value="komödie"/>Komödie<br/>
+                        </select></label><br/>
+        <label>Genre<input type="checkbox" name="genre" value="horror" checked="checked"/>Horror</label><br/>
+        <input type="checkbox" name="genre" value="psycho"/>Psycho<br/>
             <input type="checkbox" name="genre" value="krimi"/>Krimi<br/>
+        <input type="checkbox" name="genre" value="doku"/>Doku<br/>
+         <input type="checkbox" name="genre" value="komödie"/>Komödie<br/>
             <input type="checkbox" name="genre" value="romanze"/>Romanze<br/>
-        Dein Vorname<input type="text" name="vorname" size="30"/><br/>
-        Dein Nachname<input type="text" name="name" size="30"/><br/>
-        Mein Favorit<input type="checkbox" name="filmfavorit" size="1"/><br/>
+        
+        <label>Dein Vorname<input type="text" name="vorname" size="30" required="required"/></label><br/>
+        <label>Dein Nachname<input type="text" name="name" size="30" required="required"/></label><br/>
+        <label>Mein Favorit<input type="checkbox" name="filmfavorit" size="1"/></label><br/>
+            
+            <input type="submit" name="bucheintrag" value="Absenden"/>
+
+
+        </form>
+        
+        
         
     </body>
 </html>
