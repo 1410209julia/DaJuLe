@@ -1,4 +1,4 @@
- *{font-family: sans-serif; text-decoration: none; }
+ *{font-family: sans-serif; text-decoration: none; color: black; border-color: rgb(63,72,204);}
 
 body{
     background-color: rgb(153,217,234); 
@@ -38,6 +38,7 @@ body{
      color: rgb(63,72,204);
     margin-top: 200px;
     margin-right: 200px;
+    float: right;
     font-weight: bolder;
     position: relative;
         }
@@ -61,30 +62,12 @@ a:hover {background-color: rgb(63,72,204); }
 
 #ba { color: rgb(63,72,204);
       position:relative;
-      margin-left: 300px;
-      margin-bottom: -200px;
+      margin-left: 200px;
+      margin-top: 30px;
+    margin-bottom: 100px;
       font-size: 22px;
     font-weight: bolder;
-    position: relative;
 }
 
 #erster { padding-right: 15px;}
-
-#mess {margin-left: 200px;
-        margin-top: 300px;
-    font-size: 16px;
-    font-weight: bold;
-position: relative;
-color: rgb(63,72,204);
-border-width: thin;
-border-color:black;}
-
-#abs {margin-left: 50%; margin-top:100px; border-width: 10px;}
-
-label {
-    width: 10%;
-    display: block;
-    float: left;
-}
-
     
