@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+      <meta  charset="UTF-8">
+      <title>book_entry</title>
+      <link rel="stylesheet" type="text/css" href="home.css">
+  </head>  
+
+    <body>
+        <div id="ba">Buch anlegen</div>
+        
+        
+        <form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off">
+         
+  
+
+         <div id="mess"> 
+        <p style="margin-bottom: 20px;">    
+        <label for="idTitel">Buchtitel</label>
+            <input type="text" name="titel" size="30" maxlength="40" id="idTitel" required="required"/>
+        </p> 
+             
+          <p style="margin-bottom: 20px;">     
+        <label for="idBuchautor">Buchautor</label>
+              <input type="text" name="autor" size="30" maxlength="40" required="required" id="idBuchautor"/>
+             </p>
+   
+        <p style="margin-bottom: 20px";>     
+        <label for="idISBN">ISBN</lable>
+            <input id="idISBN" type="number" name="isbn" size="30" maxlength="40"/>
+             </p>
+             
+    <p style="margin-bottom: 20px;">
+        <label for="idKapitel">Kapitel</lable>
+        <input type="number" id="idKapitel" name="kapitel" size="40" required="required"/>
+    </p>
+         
+    <p style="margin-bottom: 20px;">
+        <label>Erscheinungsjahr<input type="number" name="jahr" size="30" required="required"  /></label><br/>  <!--wie auf 4 Stellen festsetzen?-->
+             </p>
+             
+    <p style="margin-bottom: 20px;">
+        <label>Auflage<input type="number" name="auflage" size="30" required="required"/></label><br/>
+             </p>
+             
+             <p style="margin-bottom: 20px;">
+        <label>Art des Buches<select name="art" size="1" <style="width:30px">
+                        <option value="eBook">eBook</option>
+                        <option value="newspaper">Newspaper</option>
+                        <option value="taschenbuch">Taschenbuch</option>
+                        <option value="lexikon">Lexikon</option>
+                        <option value="hardover" selected="selected">Hardcover</option>
+                        <option value="paperback">Paperback</option>
+                        </select></label><br/>
+             </p>
+             
+    <p style="margin-bottom: 20px;">
+        <label>Genre<input type="checkbox" name="genre" value="horror" checked="checked"/>Horror</label><br/>
+        <input type="checkbox" name="genre" value="psycho"/>Psycho<br/>
+            <input type="checkbox" name="genre" value="krimi"/>Krimi<br/>
+        <input type="checkbox" name="genre" value="doku"/>Doku<br/>
+         <input type="checkbox" name="genre" value="komödie"/>Komödie<br/>
+            <input type="checkbox" name="genre" value="romanze"/>Romanze<br/>
+             </p>
+             
+             </div> 
+            
+        <div id="pers">
+       <p><label>Dein Vorname<input type="text" name="vorname" size="30" required="required"/></label></p> 
+                                  
+        <label>Dein Nachname<input type="text" name="name" size="30" required="required"/></label><br/>
+        <label>Mein Favorit<input type="checkbox" name="filmfavorit" size="1" width: 20px;/></label><br/>
+            </div>
+            
+
+            
+            <div style= "left: 120%; top: 80% position:absolute">
+            <input style="border-width: 10px; border-color: rgb(63,72,204); font-size: 14px; color: rgb(63,72,204) text-align:central font-width:bold width:300px background-color: rgb(0,162,232)" type="submit" name="bucheintrag" value="Absenden"/>
+                </div>
+
+
+        </form>
+        
+        
+        
+    </body>
+</html>

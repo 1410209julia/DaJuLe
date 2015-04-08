@@ -1,4 +1,4 @@
- *{font-family: sans-serif;}
+ *{font-family: sans-serif; text-decoration: none; }
 
 body{
     background-color: rgb(153,217,234); 
@@ -38,36 +38,53 @@ body{
      color: rgb(63,72,204);
     margin-top: 200px;
     margin-right: 200px;
-    float: right;
     font-weight: bolder;
     position: relative;
         }
 
-#auswahlknoepfe { border-style: solid; 
-                  border-width: 10px;
-                  border-color: rgb(63,72,204);
-                  width: 150px;
-                  height: 90px;
+#auswahlknoepfe {
                   position:relative;
                   text-align: center;
-                  margin:auto;
-                  background-color: rgb(0,162,232);
+                margin-top: -40px;
                 font-size: 18px;
                 font-weight:bold;
+    
                 }
 
-a:link {color: rgb(0,0,0);<!--Farbe schwarz nich auswählbar-->
-        text-decoration: none;
+a:link { display:block; width: 200px; height: 30px;
+     border-style: solid;
+    border-width: 10px; background-color: rgb(0,162,232);
+    margin:auto; padding-top:20px;
         } 
-a:focus {color:black;}
-a:active {color: black;}
+
 a:hover {background-color: rgb(63,72,204); }
 
 #ba { color: rgb(63,72,204);
       position:relative;
-      margin-left: 100px;
-      margin-top: 30px;
+      margin-left: 300px;
+      margin-bottom: -200px;
       font-size: 22px;
     font-weight: bolder;
+    position: relative;
 }
+
+#erster { padding-right: 15px;}
+
+#mess {margin-left: 200px;
+        margin-top: 300px;
+    font-size: 16px;
+    font-weight: bold;
+position: relative;
+color: rgb(63,72,204);
+border-width: thin;
+border-color:black;}
+
+#abs {margin-left: 50%; margin-top:100px; border-width: 10px;}
+
+label {
+    width: 10%;
+    display: block;
+    float: left;
+}
+
     
