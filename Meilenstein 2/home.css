@@ -60,6 +60,7 @@ a:link { display:block; width: 200px; height: 30px;
 
 a:hover {background-color: rgb(63,72,204); }
 
+<<<<<<< Updated upstream
 #ba { color: rgb(63,72,204);
       position:relative;
       margin-left: 200px;
@@ -70,4 +71,7 @@ a:hover {background-color: rgb(63,72,204); }
 }
 
 #erster { padding-right: 15px;}
+=======
+
+>>>>>>> Stashed changes
     
