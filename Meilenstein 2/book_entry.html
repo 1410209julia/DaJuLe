@@ -4,75 +4,53 @@
 
 <head>
 	<title>book entry</title>
-    <meta http-equiv="Content-Type"
-          content="text/html; charset=UTF-8">
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="home.css">
+       
 </head>
-
 <body>
-
-<style type="text/css">
-	label {
-    	width: 160px;
-    	float: left;
-	font-size: 16px;
-	color: rgb(63,72,204)
-	}
-	body  { background-color:rgb(153,217,217);
-	font-family: sans-serif;}
-	span { font-size: 14px;
-		font-weight: bolder;}
-	.knopf { 
-	color: rgb(63,72,204);
-	width: 200px;
-	border: 10px solid rgb(63,72,204);
-	line-height: 130%;
-	background-color: rgb(0,162,232);
-	}
-</style>
-
-<div style="margin-left: 30%; font-weight: bolder">
+    
+    <div id="buchAnlegen">
 <h2 style="font-size:22px; color: rgb(63,72,204)"> Buch anlegen </h2>
 </div>
-
-<form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off">
-
-<div style="float:left;margin-left:10%; margin-top: -30%; font-weight: bolder">
+    
+   
+    <form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off">
 
 <p>
- <label id="titel" for="titel">Titel des Buches:</label>
-      <input style="width:35%" type="text" name="titel" value="" size="20" maxlength="50" required="required" />
+ <label  for="titel" >Titel des Buches:</label>
+      <input id="titel" type="text" style="width:21%" name="titel" value="" size="20"  maxlength="50" required="required" />
 </p>
 
 <p>
- <label id="autor" for="autor">Buchautor:</label>
-      <input style="width:35%" type="text" name="autor" value="" size="20" maxlength="50" required="required"/>
+ <label  for="autor">Buchautor:</label>
+      <input id="autor" type="text" style="width:21%" name="autor" value="" size="20" maxlength="50" required="required"/>
 </p>
 
 
 <p>
- <label id="isbn" for="isbn">ISBN:</label>
-      <input style="width:35%" type="number" name="isbn" value="" size="20" maxlength="50" />
+ <label for="isbn">ISBN:</label>
+      <input id="isbn"  type="number"  style="width:21%" name="isbn" value="" size="20"  />
 </p>
 
 <p>
- <label id="kapitel" for="kapitel">Kapitel:</label>
-<input style="width:35%" type="number" size="30" maxlength="40"  name="kapitel" required="required"/>
+ <label for="kapitel">Kapitel:</label>
+<input id="kapitel" type="number" style="width:21%" size="30"   name="kapitel" required="required"/>
 </p>
 
 <p>
- <label id="jahr" for="jahr">Erscheinungsjahr:</label>
-<input style="width:35%" type="number" size="30" maxlength="40" name="jahr"required="required"/>
+ <label for="jahr">Erscheinungsjahr:</label>
+<input id="jahr" type="number" style="width:21%" size="30"  name="jahr" required="required"/>
 </p>
 
 <p>
- 	<label id="auflage" for="auflage">Auflage:</label>
-	<input style="width:35%" type="number" size="30" maxlength="40" name="auflage"required="required"/>
+ 	<label for="auflage">Auflage:</label>
+	<input id="auflage" type="number" style="width:21%" size="30" name="auflage" required="required"/>
 </p>
 
 <p>
- <label id="art" for="art">Art des Buches:</label>
-<select style="width:36%; height: 22px" name="art" size="1" required="required">
+ <label for="art">Art des Buches:</label>
+<select id="art" style="width:21.5%; height: 22px" name="art" size="1" required="required">
 <option value="ebook">eBook</option>
 <option value="newspaper">Newspaper</option>
 <option value="taschenbuch" >Taschenbuch</option>
@@ -83,43 +61,34 @@
 </p>
 
 <p>
- <label id="genre" for="genre">Gernre:</label>
-<div style="margin-left: 160px;">
-<input type="checkbox" name="horror" checked="checked"/> <span> Horror </span></br>
-<input type="checkbox" name="psycho"/><span> Psycho </span></br>
-<input type="checkbox" name=krimi><span> Krimi </span></br>
+ <label id="genre" >Genre:</label>
+</p>
+<div id="ersteReihe">
+<input type="checkbox" name="horror" checked="checked"/><span> Horror</span> <br/>
+<input type="checkbox" name="psycho"/><span> Psycho </span><br/>
+<input type="checkbox" name=krimi><span> Krimi </span ><br/>
 </div>
-<div style=" margin-left: 315px; margin-top: -56px">
-<input type="checkbox" name="doku"/> <span> Doku </span><br/>
+<div id="zweiteReihe">
+<input class="zweiteReihe" type="checkbox" name="doku"/> <span> Doku </span><br/>
 <input type="checkbox" name="komödien"/> <span> Komödien </span><br/>
 <input type="checkbox" name="romanze"/><span> Romanze </span><br/>
-
-</div>
-</p>
-
-
 </div>
 
-<div style="float:right; width:50%; margin-top: -30%;">
-<p>
- 	<label id="vorname" for="vorname">Ihr Vorname:</label>
-      	<input type="text" name="vorname" value="" size="20" maxlength="50" required="required"/>
+        <div id="persoenlich"> <!--nicht auslagern können-->
+ 	<label  style="width:20%" for="vorname">Ihr Vorname</label>
+      	<input id="vorname" type="text" style="width:35%" name="vorname" value="" size="30"  required="required"/>
 
+<p>
+      	<label  style="width:20%" for="nachname">Ihr Nachname</label>
+      	<input id="nachname" type="text" style="width:35%" name="nachname" value="" size="30"  required="required"/>
 </p>
-
 <p>
-      	<label id="nachname" for="nachname">Ihr Nachname:</label>
-      	<input type="text" name="nachname" value="" size="20" maxlength="50" required="required"/>
-</p>
-
-
-<p>
- 	<label id="filmfavorit" for="filmfavorit">Favorit markieren:</label>
-	<input type="checkbox" size="30" maxlength="40" name="filmfavorit"/>
+ 	<label style="width:20%" for="filmfavorit">Mein Favorit</label>
+	<input id="filmfavorit" type="checkbox" size="30" name="filmfavorit"/>
 </p>
 </div>
 
-<div style="margin-top: 400px; margin-left:40%">
+<div>
 <input class="knopf" type="submit" name="absenden" value="Absenden"/>
 </div>
 
@@ -127,3 +96,5 @@
 </body>
 
 </html>
+
+                                                          
