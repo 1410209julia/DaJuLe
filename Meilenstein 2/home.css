@@ -9,7 +9,7 @@ body{background-color: rgb(153,217,234);  }
     font-weight: bold;
     position:relative;
         }
-.hervorhebung { color: rgb(63,72,204)};
+.hervorhebung { color: rgb(63,72,204)}
 
 #auswahl {
  
@@ -24,7 +24,7 @@ img{
     margin-bottom:4%;
     border-style: solid; 
     position: relative;
-         }
+}
  
 #we{ font-size: 72px;
      color: rgb(63,72,204);

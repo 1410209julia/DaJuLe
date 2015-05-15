@@ -6,7 +6,8 @@
 	<title>book entry</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="home.css">
-       
+    <script language="javascript" type="text/javascript" src="book_entry.js"></script>
+
 </head>
 <body>
     
@@ -15,7 +16,7 @@
 </div>
     
    
-    <form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off">
+    <form  action="http://martinakraus.net/createBookEntry.php" method="get" autocomplete="off" >
 
 <p>
  <label  for="titel" >Titel des Buches:</label>
@@ -51,11 +52,11 @@
 <p>
  <label for="art">Art des Buches:</label>
 <select id="art" style="width:21.5%; height: 22px" name="art" size="1" required="required">
+    <option value="hardcover" selected="selected">Hardcover</option>
 <option value="ebook">eBook</option>
 <option value="newspaper">Newspaper</option>
 <option value="taschenbuch" >Taschenbuch</option>
 <option value="lexikon">Lexikon</option>
-<option value="hardcover" selected="selected">Hardcover</option>
 <option value="paperback">Paperback</option>
 </select>
 </p>
