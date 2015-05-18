@@ -1,5 +1,7 @@
+//überprüft die Inputfelder auf Korrektheit
 function pruefen(vorname, nachname, titel, autor, isbn, jahr, auflage, kapitel) {
 
+    // Damit bei erneuter Prüfung die Felder nicht mehr rot sind
     document.getElementById(vorname.id).style.borderColor = "";
     document.getElementById(nachname.id).style.borderColor = "";
     document.getElementById(autor.id).style.borderColor = "";
@@ -11,87 +13,57 @@ function pruefen(vorname, nachname, titel, autor, isbn, jahr, auflage, kapitel) 
 
     pruefer = /^[a-zA-ZßäöüÄÖÜ]+$/;
 
-    //test auf Vorname
+    //Prüft übergebenen Vornamen auf Richtigkeit
     if(!pruefer.test(vorname.value)) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(vorname.id).style.borderColor = "red";
+       falsch = ueberpruefen(falsch,vorname);
     }
 
-    //test auf Nachname
+    //Prüft übergebenen Nachnamen auf Richtigkeit
     if(!pruefer.test(nachname.value)) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(nachname.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch,nachname);
     }
 
-    //test auf autor
+    //Prüft übergebenen Autor auf Richtigkeit
     if(!pruefer.test(autor.value)) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(autor.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch, autor);
     }
 
-    //test auf Titel
+    //Prüft übergebenen Titel auf Richtigkeit
     if(titel.value == "") {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(titel.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch, titel);
     }
-    //test auf ISBN
+
+    //Prüft übergebene ISBN auf Richtigkeit
     pruefer = /^[0-9]+$/;
     if(!pruefer.test(isbn.value) || isbn.value.length != 13) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(isbn.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch,isbn);
     }
 
-    //test auf Jahr
+    //Prüft übergebenes Datum auf Richtigkeit
     var aktuell = new Date().getFullYear();
     if(!pruefer.test(jahr.value) || jahr.value < 0 || jahr.value > aktuell) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(jahr.id).style.borderColor = "red";
-    }
-    pruefer = /^[0-9]+$/;
-    if(!pruefer.test(isbn.value)|| isbn.value.length != 13) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-
-        document.getElementById(isbn.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch,jahr);
     }
 
-    //test auf Auflage
+    //Prüft übergebene Auflage auf Richtigkeit
     if(!pruefer.test(auflage.value) || auflage.value < 0) {
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-
-        document.getElementById(auflage.id).style.borderColor = "red";
+        falsch = ueberpruefen(falsch, auflage);
     }
-    //test auf Kapitel
+
+    //Prüft übergebene Kapitel auf Richtigkeit
     if(!pruefer.test(kapitel.value) || kapitel.value < 0){
-        if(falsch == false){
-            alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
-            falsch = true;
-        }
-        document.getElementById(kapitel.id).style.borderColor = "red";
+      falsch = ueberpruefen(falsch, kapitel);
     }
 
     return !falsch;
+}
+
+// Regelt die Fehlermeldung und färbt die Inputfelder rot
+function ueberpruefen(fehler, name){
+    if(fehler == false){
+        alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+        name.focus();
+    }
+        document.getElementById(name.id).style.borderColor = "red";
+    return true;
 }
