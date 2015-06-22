@@ -52,9 +52,9 @@ function laden(json_object) {
         "<td>"+ json_object.bookdata[i].autor+"</td>" +
         "<td>"+ json_object.bookdata[i].titel+"</td>"+
         "<td>"+ json_object.bookdata[i].kapitel+"</td>" +
-        "<td>"+ json_object.bookdata[i].buchart+"</td>" +
-        "<td>"+ json_object.bookdata[i].ISBN+"</td>" +
-        "<td>"+ json_object.bookdata[i].erscheinungsjahr+"</td>" +
+        "<td>"+ json_object.bookdata[i].art+"</td>" +
+        "<td>"+ json_object.bookdata[i].isbn+"</td>" +
+        "<td>"+ json_object.bookdata[i].jahr+"</td>" +
         "<td>"+ json_object.bookdata[i].auflage+"</td>" +
         "</tr>";
     }
