@@ -8,7 +8,7 @@ header('Content-Type: application/json');
     }else {
         $json_obj = file_get_contents('json/roman_books.json');
     }
-        $json_obj = utf8_encode($json_obj);
+        $json_obj = utf8_decode($json_obj);
         echo $json_obj;
 
 ?>
